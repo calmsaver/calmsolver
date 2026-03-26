@@ -713,7 +713,7 @@ fn enumerate_logs_and_snapshot(
                 if let Some(snap_id) = snapshot {
                     if snap_id < id {
                         log::warn!(
-                            "removing stale snapshot {id} that is superceded by snapshot {id}"
+                            "removing stale snapshot {snap_id} that is superceded by snapshot {id}"
                         );
 
                         if let Err(e) = fs::remove_file(&file_name) {
